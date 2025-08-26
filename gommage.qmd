@@ -1,0 +1,20 @@
+---
+title: "Gommage" 
+format: html
+ opts_chunk:
+    python.reticulate: true
+---
+
+```{python}
+import pandas as pd
+dem_dat = pd.read_csv("4512784c-f122-11ef-8c1b-3860777c1fe6.csv")
+
+```
+
+```{python}
+wrangled_df = wrangle_demography_df(dem_dat)
+```
+
+```{r}
+wrangled_df_r <- py$wrangled_df 
+```
